@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import './css/Home.css'
+import './css/Index.css'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
