@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Potra';
+    src: local('Potra'), url(../fonts/Potra.otf) format('otf');
+}
+
+body{
+    background-color: #C8CCB5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    max-width: 1750px;
+    margin: auto;
+}
+
+.nav{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.nav-about, .nav-create{
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.nav-create{
+    float: right;
+}
+
+.hero{
+    max-height: 100% !important;
+    margin-top: 25vh;
+}
+
+.hero h1{
+    font-family: Potra;
+    font-size: 70px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.hero p{
+    text-align: center;
+    font-size: 23px;
+    margin-top: 0;
+}
+
+.hero-btn{
+    text-align: center;
+    text-decoration: none;
+    border: 4px solid black;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 40px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 25px;
+    display: block;
+    margin:auto;
+    max-width: 300px;
+    margin-top: 40px;
+}
+
+.hero-btn:hover{
+    text-decoration: underline;
+}
