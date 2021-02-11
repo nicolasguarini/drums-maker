@@ -1,0 +1,17 @@
+/* -------GENERAL------- */
+@font-face {
+    font-family: 'Potra';
+    src: local('Potra'), url(../fonts/Potra.otf) format('otf');
+}
+
+body{
+    background-color: #C8CCB5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    max-width: 1750px;
+    margin: auto;
+    padding: 15px;
+}
+

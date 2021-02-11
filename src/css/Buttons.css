@@ -1,0 +1,17 @@
+/* -------BUTTONS------- */
+.buttons-container{
+    margin: auto;
+    text-align: center;
+}
+
+.button-play{
+    width:  170px;
+    height: 55px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 540px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 40px;
+}
