@@ -1,12 +1,33 @@
 import React from 'react'
 import './css/App.css'
+import './css/Buttons.css'
 import Helmet from 'react-helmet'
 
-//components's imports
+//components imports
 import Nav from './components/Nav'
-import Buttons from './components/Buttons'
 
 class Maker extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {currentState: 'paused'}
+
+        this.handleClickPlayPause = this.handleClickPlayPause.bind(this)
+        this.handleClickLoad = this.handleClickLoad.bind(this)
+        this.handleClickSave = this.handleClickSave.bind(this)
+    }
+
+    handleClickPlayPause(){
+        if(this.state.currentState === 'playing') this.setState({currentState: 'paused'})
+        else this.setState({currentState: 'playing'})
+    }
+
+    handleClickSave(){
+        console.log("Save button clicked")
+    }
+
+    handleClickLoad(){
+        console.log("Load button clicked");
+    }
 
     render(){
         return(
@@ -19,7 +40,12 @@ class Maker extends React.Component{
                 <div className="container">
                     <Nav />
 
-                    <Buttons />
+                    <div className="buttons-container">
+                        <button className="button" onClick={this.handleClickPlayPause}>{this.state.currentState === 'playing' ? 'PAUSE' : 'PLAY'}</button>
+                        <button className="button" onClick={this.handleClickSave}>SAVE</button>
+                        <button className="button" style={{marginRight: "0"}} onClick={this.handleClickLoad}>LOAD</button>
+                    </div>
+
                 </div>
             </>
         )
