@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import './css/Index.css'
+import '../css/Index.css'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -26,9 +26,6 @@ const Home = () => {
                     <Link to="/create" className="hero-btn">Let's start now!</Link>
                 </div>
             </div>
-            
-            
-
         </>
     )
 }

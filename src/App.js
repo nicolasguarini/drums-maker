@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Home from './Home'
-import Maker from './Maker'
+import Home from './pages/Home'
+import Maker from './pages/Maker'
 
 function App() {
   return (

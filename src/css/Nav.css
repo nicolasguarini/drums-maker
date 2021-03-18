@@ -44,3 +44,13 @@
     .nav-exit{font-size: 20px}
     .nav-create{font-size: 20px}
 }
+
+@media(max-width: 550px){
+    .nav-exit{margin-left: -1000px;}
+    .nav-create{margin-top: -1000px;}
+    .logo{font-size: 40px;}
+}
+
+@media(max-width: 335px){
+    .logo{font-size: 30px;}
+}

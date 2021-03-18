@@ -1,19 +1,19 @@
 import React from 'react'
-import './css/App.css'
-import './css/Buttons.css'
+import '../css/App.css'
+import '../css/Buttons.css'
 import Helmet from 'react-helmet'
 
 //components imports
-import Nav from './components/Nav'
+import Nav from '../components/Nav'
 
 class Maker extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {currentState: 'paused'}
-
+    constructor(){
+        super()
         this.handleClickPlayPause = this.handleClickPlayPause.bind(this)
         this.handleClickLoad = this.handleClickLoad.bind(this)
         this.handleClickSave = this.handleClickSave.bind(this)
+
+        this.state = {currentState: 'paused'}
     }
 
     handleClickPlayPause(){
