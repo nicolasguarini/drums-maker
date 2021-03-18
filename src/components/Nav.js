@@ -6,7 +6,7 @@ const Nav = () =>{
         <>
             <div className="nav">
                 <span className="nav-exit">exit</span>
-                <span className="nav-create">about</span>
+                <span className="nav-github"><img src="https://www.corsinvest.it/wp-content/uploads/2019/10/github-logo.png" width="40px" alt="github logo" /></span>
             </div>
 
             <div className="logo-container">
