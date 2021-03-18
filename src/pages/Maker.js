@@ -5,6 +5,7 @@ import '../css/App.css'
 //components imports
 import Nav from '../components/Nav'
 import Buttons from '../components/Buttons'
+import Pattern from '../components/Pattern'
 
 export default function Maker(){
     return(
@@ -18,6 +19,8 @@ export default function Maker(){
                 <Nav />
 
                 <Buttons />
+
+                <Pattern />
             </div>
         </>
     )

@@ -1,0 +1,38 @@
+.pattern-wrapper{
+    display: block;
+    max-width: auto;
+    margin: auto;
+    margin-top: 75px;
+}
+
+.sound-name{
+    font-weight: bold;
+    font-size: 30px;
+    width: 325  px; 
+    text-align: right;
+    margin-right: 30px;
+}
+
+.pattern-button{
+    width: 20px !important;
+    height: 30px !important;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    margin-right: 5px;
+}
+
+.first-beat{border: 1px solid black;}
+.last-beat{margin-right: 12px;}
+.selected-beat{background: rgb(80, 80, 80);}
+
+.sample{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.pattern-button:hover{
+    border: 1px solid #a2a594;
+}
+
+.pattern-button:focus {outline:none;}
