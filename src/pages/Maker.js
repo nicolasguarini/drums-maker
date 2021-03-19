@@ -4,7 +4,7 @@ import '../css/App.css'
 
 //components imports
 import Nav from '../components/Nav'
-import Buttons from '../components/Buttons'
+import Player from '../components/Player'
 import Pattern from '../components/Pattern'
 
 export default function Maker(){
@@ -18,7 +18,7 @@ export default function Maker(){
             <div className="container">
                 <Nav />
 
-                <Buttons />
+                <Player />
 
                 <Pattern />
             </div>

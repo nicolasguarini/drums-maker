@@ -11,10 +11,10 @@ export default function Patterns(){
     return(
         <div className="pattern-wrapper">
             <Kick />
-            <Snare />
-            <Clap />
             <HiHats />
             <OHats />
+            <Snare />
+            <Clap />
         </div>
     )
 }
