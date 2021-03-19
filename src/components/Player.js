@@ -57,7 +57,6 @@ export default function Player(){
             timeout = timeout + delay;
         }
         
-
         if(currentPlayingState === 'paused')
             setTimeout(stop, timeout)
         else
