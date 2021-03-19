@@ -1,6 +1,6 @@
 .pattern-wrapper{
     display: block;
-    max-width: auto;
+    max-width: 1100px;
     margin: auto;
     margin-top: 75px;
 }
@@ -28,7 +28,7 @@
 
 .sample{
     display: block;
-    text-align: center;
+    text-align: right;
     margin-bottom: 20px;
 }
 .pattern-button:hover{

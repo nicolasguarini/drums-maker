@@ -1,5 +1,10 @@
 import {atom} from 'recoil'
 
+export const bpmState = atom({
+    key: "bpmState",
+    default: 130
+})
+
 export const playingState = atom({
     key: "playingState",
     default: "paused"
@@ -7,7 +12,27 @@ export const playingState = atom({
 
 export const kickPattern = atom({
     key: "kickPattern",
-    default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+})
+
+export const snarePattern = atom({
+    key: "snarePattern",
+    default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+})
+
+export const clapPattern = atom({
+    key: "clapPattern",
+    default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+})
+
+export const hiHatsPattern = atom({
+    key: "hiHatsPattern",
+    default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+})
+
+export const oHatsPattern = atom({
+    key: "oHatsPattern",
+    default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 })
 
 export const replaceItemAtIndex = (arr, index, newValue) => {
