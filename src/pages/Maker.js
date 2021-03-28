@@ -6,6 +6,7 @@ import '../css/App.css'
 import Nav from '../components/Nav'
 import Player from '../components/Player'
 import Pattern from '../components/Pattern'
+import Settings from '../components/Settings'
 
 export default function Maker(){
     return(
@@ -19,6 +20,8 @@ export default function Maker(){
                 <Nav />
 
                 <Player />
+
+                <Settings />
 
                 <Pattern />
             </div>

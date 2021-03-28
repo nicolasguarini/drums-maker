@@ -2,7 +2,17 @@ import {atom} from 'recoil'
 
 export const bpmState = atom({
     key: "bpmState",
-    default: 130
+    default: 65
+})
+
+export const genreState = atom({
+    key: "genreState",
+    default: "trap"
+})
+
+export const repeatState = atom({
+    key: "repeatState",
+    default: 1
 })
 
 export const playingState = atom({
