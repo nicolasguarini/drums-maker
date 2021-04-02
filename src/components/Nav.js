@@ -1,12 +1,13 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import '../css/Nav.css'
 
 const Nav = () =>{
     return(
         <>
             <div className="nav">
-                <span className="nav-exit">exit</span>
-                <span className="nav-github"><img src="https://www.corsinvest.it/wp-content/uploads/2019/10/github-logo.png" width="40px" alt="github logo" /></span>
+                <Link to="/" style={{color: 'black', textDecoration: "none", zIndex: "100"}}><span className="nav-exit">exit</span></Link>
+                <a href="https://github.com/nicolasguarini/drums-maker"><span className="nav-github"><img src="https://www.corsinvest.it/wp-content/uploads/2019/10/github-logo.png" width="40px" alt="github logo" /></span></a>
             </div>
 
             <div className="logo-container">

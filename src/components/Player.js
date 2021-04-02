@@ -9,14 +9,15 @@ import '../css/Buttons.css'
 
 export default function Player(){
     const [currentPlayingState, setCurrentPlayingState] = useRecoilState(playingState)
-    const [currentKickPattern] = useRecoilState(kickPattern)
-    const [currentHHPattern] = useRecoilState(hiHatsPattern)
-    const [currentSnarePattern] = useRecoilState(snarePattern)
-    const [currentClapPattern] = useRecoilState(clapPattern)
-    const [currentOHatsPattern] = useRecoilState(oHatsPattern)
-    const [currentBpmState] = useRecoilState(bpmState)
-    const [currentGenreState] = useRecoilState(genreState)
-    const [currentRepeatState] = useRecoilState(repeatState)
+    const [currentKickPattern, setCurrentKickPattern] = useRecoilState(kickPattern)
+    const [currentHHPattern, setCurrentHHPattern] = useRecoilState(hiHatsPattern)
+    const [currentSnarePattern, setCurrentSnarePattern] = useRecoilState(snarePattern)
+    const [currentClapPattern, setCurrentClapPattern] = useRecoilState(clapPattern)
+    const [currentOHatsPattern, setCurrentOHatsPattern] = useRecoilState(oHatsPattern)
+    const [currentBpmState, setCurrentBpmState] = useRecoilState(bpmState)
+    const [currentGenreState, setCurrentGenreState] = useRecoilState(genreState)
+    const [currentRepeatState, setCurrentRepeatState] = useRecoilState(repeatState)
+
 
     let [playTrapKick] = useSound(require('../assets/trap/kick.mp3'))
     let [playTrapHH] = useSound(require('../assets/trap/hh.mp3'))
@@ -114,19 +115,61 @@ export default function Player(){
     }
 
     function handleClickSave(){
-        console.log("Save button clicked")
+        let name = prompt("Insert pattern name:")
+
+        if(name == null) return
+
+        let pattern = {
+            name: name,
+            genre: currentGenreState,
+            bpm: currentBpmState,
+            kick: currentKickPattern,
+            snare: currentSnarePattern, 
+            hh: currentHHPattern,
+            oh: currentOHatsPattern, 
+            clap: currentClapPattern,
+            repeat: currentRepeatState,
+            date: Date.now()
+        }
+
+        localStorage.setItem(name, JSON.stringify(pattern))
+        alert("Pattern " + name + " saved successfully!")
     }
 
     function handleClickLoad(){
-        console.log("Load button clicked");
+        let name = prompt("Insert pattern name to load:")
+        let patternToLoad = localStorage.getItem(name)
+
+        if(patternToLoad == null){
+            alert("Insert valid name!")
+            return
+        }
+
+        patternToLoad = JSON.parse(patternToLoad)
+        console.log(patternToLoad)
+
+        setCurrentGenreState(patternToLoad.genre)
+        setCurrentBpmState(patternToLoad.bpm)
+        setCurrentKickPattern(patternToLoad.kick)
+        setCurrentSnarePattern(patternToLoad.snare)
+        setCurrentClapPattern(patternToLoad.clap)
+        setCurrentHHPattern(patternToLoad.hh)
+        setCurrentOHatsPattern(patternToLoad.oh)
+        setCurrentRepeatState(patternToLoad.repeat)
+        
+        alert("Pattern loaded successfully!")
     }
 
     return(
+        <>
         <div className="buttons-container">
             <button className="button" onClick={handleClickPlayPause}>{currentPlayingState === 'playing' ? 'PLAYING' : 'PLAY'}</button>
             <button className="button" onClick={handleClickSave}>SAVE</button>
             <button className="button" style={{marginRight: "0"}} onClick={handleClickLoad}>LOAD</button>
         </div>
+        </>
+        
+        
     )
 }
 

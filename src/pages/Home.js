@@ -16,8 +16,8 @@ const Home = () => {
             
             <div className="container">
                 <div className="nav">
-                    <span className="nav-about">about</span>
-                    <span className="nav-create">create drums</span>
+                    <a href="https://github.com/nicolasguarini/drums-maker"><span className="nav-about"><img width="50" src="https://www.corsinvest.it/wp-content/uploads/2019/10/github-logo.png" alt="github"></img></span></a>
+                    <Link to="/create"><span className="nav-create" style={{color: "black"}}>create drums</span></Link>
                 </div>
 
                 <div className="hero">

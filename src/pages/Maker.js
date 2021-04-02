@@ -20,7 +20,7 @@ export default function Maker(){
                 <Nav />
 
                 <Player />
-
+                
                 <Settings />
 
                 <Pattern />
